@@ -1,0 +1,4 @@
+#1. Admin Login is not available for user already logged in as a user.
+#2. Instead of black and white page, I used pic in background.
+#3. Links like- home,ticket list etc will be activated after user logged in
+#4. Home page for admin is different and ticket list will be shown in that page

@@ -1,0 +1,31 @@
+<!-- <hr> -->
+
+<ul class="nav nav-expand-lg bg-dark navbar-dark">
+    <!-- bg-dark navbar-dark -->
+    <!-- navbar-dark bg-dark navbar -->
+    <li><a *ngIf="!bool2 && !bool3" routerLink="" class="nav-link"><strong>Login</strong></a></li>
+    <li><a *ngIf="!bool2 && !bool3" routerLink="/admin-login" class="nav-link"><strong>Admin Login</strong></a></li>
+    <li><a *ngIf="!bool2 && !bool3" routerLink="/sign-up" class="nav-link"><strong>Register</strong></a></li>
+
+    <li><a *ngIf="bool2 && !bool3" routerLink="/home" class="nav-link"><strong>Home</strong></a></li>
+    <li><a *ngIf="bool2 && !bool3" routerLink="/ticket-req" class="nav-link"><strong>New Ticket</strong></a></li>
+    <li><a *ngIf="bool2 && !bool3" routerLink="/ticket-list" class="nav-link"><strong>My Tickets</strong></a></li>
+
+
+</ul>
+
+<div class="floatr">
+    <a *ngIf="bool2 || bool3" routerLink="/logout" class="nav-link"><strong>Logout</strong></a>
+</div>
+<div class="container">
+    <div class="wrap">
+        <section class="back">
+
+            <router-outlet>
+            </router-outlet>
+        </section>
+    </div>
+    <div class="footer">
+        <footer></footer>
+    </div>
+</div>

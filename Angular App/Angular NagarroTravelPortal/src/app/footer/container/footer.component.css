@@ -1,0 +1,27 @@
+a {
+    color: black;
+}
+
+.footer {
+    /* position: relative; */
+    /* padding-top: 5%; */
+    /* bottom: 2%;
+    width: 100%; */
+    /* Set the fixed height of the footer here */
+    /* height: 10%; */
+    /* line-height: 60px; */
+    font-family: 'proximanova-semibold-webfont';
+    font-size: 16px;
+    text-align: center;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.5);
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    text-decoration: none;
+    list-style: none;
+    background-color: transparent;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

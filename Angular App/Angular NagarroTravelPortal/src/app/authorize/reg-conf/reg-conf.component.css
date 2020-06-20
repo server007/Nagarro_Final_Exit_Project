@@ -1,0 +1,32 @@
+.alligntext {
+    text-align: right;
+    font-weight: bold;
+}
+
+h1,
+h6 {
+    max-width: 100%;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+table {
+    font-size: 18px;
+    padding-bottom: 2%;
+}
+
+a,
+a:hover {
+    color: white;
+}
+
+.block {
+    max-width: 50%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+button {
+    /* padding: 2%; */
+    /* width: 100%; */
+}

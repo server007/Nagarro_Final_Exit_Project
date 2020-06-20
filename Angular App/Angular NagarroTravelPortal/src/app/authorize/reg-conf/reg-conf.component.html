@@ -1,0 +1,71 @@
+<div id="component1">
+    <h1> R E G I S T R A T I O N : C O N F I R M A T I O N</h1>
+    <h6>Thank you for registering. The admin will contact you shortly with your username and password.</h6>
+    <div class="block">
+        <div>
+            <table>
+                <tr>
+                    <td class="alligntext">Name : </td>
+                    <td class="allignres"> {{user2.firstName}} {{user2.lastName}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Business Unit : </td>
+                    <td class="allignres"> {{user2.businessUnit}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Title :</td>
+                    <td class="allignres"> {{user2.title}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">E-mail :</td>
+                    <td class="allignres"> {{user2.email}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Telephone :</td>
+                    <td class="allignres"> {{user2.telephone}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Address 1 :</td>
+                    <td class="allignres"> {{user2.address1}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Address 2 :</td>
+                    <td class="allignres"> {{user2.address2}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">City :</td>
+                    <td class="allignres"> {{user2.city}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">State :</td>
+                    <td class="allignres"> {{user2.state}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Zip :</td>
+                    <td class="allignres"> {{user2.zip}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Country :</td>
+                    <td class="allignres"> {{user2.country}}</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div class="col-md-8 buttonscls button-group">
+            <div class="row">
+                <div class=" col-sm-3 text-center p-1 col">
+                    <a (click)="printComponent('component1')" class="btn btn-default btn-rounded mb-4 btn-secondary">
+                     Print</a>
+                </div>
+                <div class="col-sm-2 text-center p-1 col">
+                    <a (click)="editDoc()" class="btn btn-default btn-rounded mb-4 btn-secondary">
+                     Edit</a>
+                </div>
+                <div class="col-sm-7 text-center p-1 col">
+                    <a (click)="onSubmit()" class="btn btn-default btn-rounded mb-4 btn-secondary">
+                     Return to Home Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

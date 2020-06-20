@@ -1,0 +1,103 @@
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="ticket-req.component.css">
+</head>
+<div>
+    <h1> T I C K E T - R E Q U E S T </h1>
+    <form ngNativeValidate #form>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputReqType">Request Type</label>
+                <select id="inputReqType" [(ngModel)]="ticket.reqType" name="reqType" class="form-control" required>
+                    <option [ngValue]="reqType" [selected]="true" disabled>Select Request Type</option>
+                    <option  *ngFor="let reqType of reqTypes; let i = index">{{reqType}}</option>
+                    <!-- <option [ngValue] selected>{{reqTypes[0]}}</option> -->
+                </select>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="priority">Priority</label>
+                <select id="priority" [(ngModel)]="ticket.priority" name="priority" class="form-control" required>
+                    <option [selected]="true" [ngValue]="priority" disabled>Select Priority</option>
+                    <option  *ngFor="let priority of priorities;">{{priority}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="travelCity">Travel City</label>
+                <select id="travelCity" [(ngModel)]="ticket.travelCity" name="travelCity" class="form-control" required>
+                    <option [ngValue]="travelCity" disabled>Select Travel City</option>
+                    <option  *ngFor="let travelCity of travelCities;">{{travelCity}}</option>
+                </select>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label for="locationCity">Location City</label>
+                <select id="locationCity" [(ngModel)]="ticket.locationCity" name="locationCity" class="form-control" required>
+                    <option [selected]="true" [ngValue]="locCity" disabled>Select Location City</option>
+                    <option  *ngFor="let locCity of locCities;">{{locCity}}</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="travelDate">Travel Start Date</label>
+                <input type="date" id="travelDate" [(ngModel)]="ticket.travelDate" name="travelDate" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="travelEndDate">Travel End Date</label>
+                <input type="date" id="travelEndDate" [(ngModel)]="ticket.travelEndDate" name="travelEndDate" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="passport">Passport Number</label>
+            <input type="text" class="form-control" id="passport" [(ngModel)]="ticket.passport" name="passport" placeholder="" maxlength="25" required>
+        </div>
+
+        <div class="form-group ">
+            <label for="projectName">Project Name</label>
+            <input type="text" class="form-control" id="projectName" [(ngModel)]="ticket.projectName" name="projectName" placeholder="" maxlength="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="travelAppr">Expense Borne by</label>
+            <!-- <input *ngFor="let ex of expenseBorne;" [(ngModel)]="ticket.expenseBorne" name="expenseBorne" type="checkbox" /> -->
+            <!-- <input type="checkbox" id="rememberMe" name="expe" [(ngModel)]="ticket.expenseBorne">Nagarro -->
+            <!-- <input type="checkbox" id="rememberMe2" name="rememberMe" [(ngModel)]="ticket.expenseBorne">Client -->
+            <div class="col">
+                <input type="radio" value="male" name="gender" [(ngModel)]="ticket.expenseBorne"> N a g a r r o
+                <input type="radio" value="female" name="gender" [(ngModel)]="ticket.expenseBorne"> C l i e n t
+            </div>
+
+        </div>
+
+        <div class="form-group ">
+            <label for="travelAppr">Travel Approver Name</label>
+            <input type="text" class="form-control" id="travelAppr" [(ngModel)]="ticket.travelAppr" name="travelAppr" placeholder="" maxlength="100" required>
+        </div>
+
+        <div class="form-group ">
+            <label for="expectedDur">Expected Duration of Travel</label>
+            <input type="text" class="form-control" id="expectedDur" [(ngModel)]="ticket.expectedDur" name="expectedDur" placeholder="" maxlength="100" required>
+        </div>
+
+        <div class="form-group">
+            <label for="travelAmm">Any Upper Bound on Allowed Amount? If yes Specify.</label>
+            <textarea class="form-control" id="travelAmm" [(ngModel)]="ticket.travelAmm" name="travelAmm" placeholder="" maxlength="500" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="addDetails">Any Additional Details</label>
+            <textarea class="form-control" id="addDetails" [(ngModel)]="ticket.addDetails" name="addDetails" placeholder="" maxlength="1000" required></textarea>
+
+        </div>
+
+
+        <div class="text-center">
+            <button type="submit" (click)="form.checkValidity() ? onSubmit() : null" class="btn btn-primary ">Submit</button>
+        </div>
+    </form>

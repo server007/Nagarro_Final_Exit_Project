@@ -1,0 +1,31 @@
+form {
+    max-width: 50%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+h1 {
+    max-width: 100%;
+    text-align: center;
+    /* text-decoration: underline; */
+}
+
+span {
+    font-stretch: expanded;
+}
+
+a {
+    color: rgb(3, 44, 177);
+    cursor: pointer;
+}
+
+a.hover {}
+
+button {
+    padding: 2%;
+    width: 100%;
+}
+
+#but {
+    align-self: center;
+}

@@ -1,0 +1,37 @@
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+
+form {
+    max-width: 50%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+h1 {
+    max-width: 100%;
+    text-align: center;
+}
+
+span {
+    font-stretch: expanded;
+}
+
+button {
+    padding: 2%;
+    width: 100%;
+}
+
+#but {
+    align-self: center;
+}
+
+input[type="radio"] {
+    margin: 0 10px 0 30px;
+}
+
+button[type="submit"] {}
+
+
+/* 
+input {
+    background-color: lightgray;
+} */

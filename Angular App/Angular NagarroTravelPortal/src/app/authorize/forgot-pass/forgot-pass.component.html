@@ -1,0 +1,18 @@
+<div>
+    <h1> FORGOT USERNAME AND PASSWORD </h1>
+    <form ngNativeValidate #form3>
+        <div class="alert alert-warning" *ngIf='invalidEmail'>{{errorMessage}}</div>
+        <!-- <div class="alert alert-success" *ngIf='loginSuccess'>{{successMessage}}</div> -->
+        <span><strong>Please enter your e-mail and your information will be mailed to you</strong></span>
+        <br>
+        <br>
+        <div class="form-group">
+            <label for="exampleInputEmail1">E-mail</label>
+            <input type="email" class="form-control" id="InputEmail1" [(ngModel)]="user.email" placeholder="abc@nagarro.com" required name="username">
+        </div>
+        <button type="submit" (click)="form3.checkValidity() ? submit() : null" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<div>
+    <a class="nav-link" routerLink="">Return to Log-in page</a>
+</div>

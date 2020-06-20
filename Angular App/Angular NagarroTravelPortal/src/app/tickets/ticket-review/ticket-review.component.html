@@ -1,0 +1,110 @@
+<div id="component1 row">
+    <h1> T I C K E T : I N F O R M A T I O N </h1>
+    <br>
+
+    <div class="block col-md-7">
+        <div>
+            <table>
+                <tr>
+                    <td class="alligntext">Request Type : </td>
+                    <td class="allignres"> {{ticket.reqType}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Priority : </td>
+                    <td class="allignres"> {{ticket.priority}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Travel City :</td>
+                    <td class="allignres"> {{ticket.travelCity}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Location City :</td>
+                    <td class="allignres"> {{ticket.locationCity}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Travel Date :</td>
+                    <td class="allignres"> {{ticket.travelDate}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Travel End Date :</td>
+                    <td class="allignres"> {{ticket.travelEndDate}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Passport :</td>
+                    <td class="allignres"> {{ticket.passport}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Project Name :</td>
+                    <td class="allignres"> {{ticket.projectName}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Expense Borne By :</td>
+                    <td class="allignres"> {{ticket.expenseBorne}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Travel Approved By :</td>
+                    <td class="allignres"> {{ticket.travelAppr}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Expected Duration :</td>
+                    <td class="allignres"> {{ticket.expectedDur}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Travel Upper Bound:</td>
+                    <td class="allignres"> {{ticket.travelAmm}}</td>
+                </tr>
+                <tr>
+                    <td class="alligntext">Any Other Details :</td>
+                    <td class="allignres"> {{ticket.addDetails}}</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <!-- <div class="col-md-8 buttonscls button-group">
+            <div class="row">
+                <div class=" col-sm-3 text-center p-1 col">
+                    <a (click)="printComponent('component1')" class="btn btn-default btn-rounded mb-4 btn-secondary">
+                     Print</a>
+                </div>
+                <div class="col-sm-2 text-center p-1 col">
+                    <a (click)="editDoc()" class="btn btn-default btn-rounded mb-4 btn-secondary">
+                     Edit</a>
+                </div>
+                <div class="col-sm-7 text-center p-1 col">
+                    <a (click)="onSubmit()" class="btn btn-default btn-rounded mb-4 btn-secondary">
+                     Return to Home Page</a>
+                </div>
+            </div>
+        </div> -->
+    </div>
+    <div class="block2 col-md-5">
+        <form ngNativeValidate #form>
+            <div class="form-row">
+                <div class="form-group col-md-2">
+                    <label for="status"><b>Status :</b></label>
+                </div>
+                <div class="form-group col-md-3">
+
+                    <select id="status" [(ngModel)]="ticket.status" name="status" placeholder="select" class="form-control" required>
+                    <option disabled selected>{{ticket.status}}</option>
+                    <option click="changeSt()" [ngValue]="['in Process']" >in process</option>
+                </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="comments"><b>Comments :</b></label>
+                <textarea class="form-control" id="comments" [(ngModel)]="ticket.comments" name="comments" placeholder="" maxlength="1000">
+                </textarea>
+            </div>
+            <div class="form-group col-md-3" style="background: none;">
+                <label for="file"><b>File :</b></label>
+                <input type="file" class="form-control" id="file" [(ngModel)]="ticket.file" name="file" placeholder="">
+
+            </div>
+            <div class="text-center">
+                <button type="submit" (click)="form.checkValidity() ? onSubmit() : null" class="btn btn-primary ">Submit</button>
+            </div>
+        </form>
+        <a routerLink="/ticket-list">Return to Ticket List</a>
+    </div>
+</div>

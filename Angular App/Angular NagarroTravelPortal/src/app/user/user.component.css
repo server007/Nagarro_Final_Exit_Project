@@ -1,0 +1,44 @@
+.sidebar{
+    float: left;
+    width: 20%;
+    height: 100%;
+    padding-left: 2em;
+}
+
+.sidenav-container {
+    /* height: 100%; */
+    padding-top: 6em;
+  }
+  
+  .sidenav {
+    width: 150px;
+    padding-top: 6em;
+    /* background: whitesmoke; */
+  }
+  
+  .sidenav .mat-toolbar {
+    /* background: whitesmoke; */
+    top: 6em;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: 30px;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    
+  }
+  a:link{
+    color:whitesmoke;
+  }
+  a{
+    font-size: 20px;
+    font-weight: bolder;
+    
+  }
+  a:hover{
+    background-color: transparent;
+    color: antiquewhite;
+  }

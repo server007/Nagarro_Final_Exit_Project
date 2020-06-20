@@ -1,0 +1,18 @@
+/* body {
+    background-image: none;
+    background-color: lavenderblush;
+} */
+
+.slider {
+    width: 60%;
+    /* height: 60%; */
+    display: flex;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.slide {
+    width: 60%;
+    flex-shrink: 0;
+    height: 50%;
+}

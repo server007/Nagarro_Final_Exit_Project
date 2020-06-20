@@ -1,0 +1,31 @@
+======================================================================================
+Save user details in database
+//	 @PostMapping("/user")  
+//	    public UserDetails saveUser(@Valid @RequestBody UserDetails userdetails) {  
+		 //user.setAddress(address);
+//		  User user= convertUserToSave(userdetails);
+		// System.out.println(a);
+//		 return udrepo.save(userdetails) ;
+	       	          
+//	    }  
+//	 public User convertUserToSave(UserDetails userdetails)
+//	 {
+//		 User u=new User();
+//		 Address a=new Address();
+//		 u.setFirstName(userdetails.getFirstName());
+//		 u.setLastName(userdetails.getLastName());
+//		 u.setBusinessUnit(userdetails.getBusinessUnit());
+//		 u.setEmail(userdetails.getTitle());
+//		 u.setEmail(userdetails.getEmail());
+//		 u.setEmail(userdetails.getTelephone());
+//		 u.setAddress1(userdetails.getAddress1());
+//		 u.setAddress2(userdetails.getAddress2());
+//		 u.setCity(userdetails.getCity());
+//		 u.setState(userdetails.getState());
+//		 u.setZip(userdetails.getZip());
+//		 u.setCountry(userdetails.getCountry());
+//		 
+		 //u.setAddress(a);
+//		 a.setUser(u);
+//		 return u;
+//	 }

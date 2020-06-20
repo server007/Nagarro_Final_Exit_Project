@@ -1,0 +1,28 @@
+form {
+    max-width: 50%;
+    padding-top: 3%;
+    padding-bottom: 2%;
+}
+
+h1 {
+    max-width: 100%;
+    text-align: center;
+}
+
+span {
+    font-stretch: expanded;
+}
+
+a {
+    color: blue;
+    cursor: pointer;
+}
+
+button {
+    padding: 2%;
+    width: 100%;
+}
+
+#but {
+    align-self: center;
+}

@@ -1,0 +1,82 @@
+<div>
+    <h1> R E G I S T R A T I O N </h1>
+    <!-- <img [src]="bannerPath" class="banner" /> -->
+    <form ngNativeValidate #form2>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" id="first_name" [(ngModel)]="user.firstName" name="firstName" placeholder="Enter Your First Name" minlength="3" required>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" id="last_name" [(ngModel)]="user.lastName" name="lastName" placeholder="Enter Your Last Name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="business_unit">Business Unit</label>
+            <input type="text" class="form-control" id="business_unit" [(ngModel)]="user.businessUnit" name="businessUnit" placeholder="Enter your Business Unit" required>
+        </div>
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" class="form-control" id="title" [(ngModel)]="user.title" name="title" placeholder="Enter Your Title" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" [(ngModel)]="user.email" name="email" placeholder="abc@nagarro.com" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Telephone</label>
+            <input type="tel" class="form-control" id="phone" [(ngModel)]="user.telephone" name="telephone" placeholder="+91 1234567890" required>
+        </div>
+
+        <div class="form-group">
+            <label for="inputAddress">Address 1</label>
+            <input type="text" class="form-control" id="inputAddress" [(ngModel)]="user.address1" name="address1" placeholder="Enter Flat no. and Locality" required>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-8">
+                <label for="inputAddress2">Address 2</label>
+                <input type="text" class="form-control" id="inputAddress2" [(ngModel)]="user.address2" name="address2" placeholder="Enter Landmark and Region">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" [(ngModel)]="user.city" name="city" placeholder="Enter City" required>
+            </div>
+
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" [(ngModel)]="user.state" name="state" placeholder="select" class="form-control" required>
+                <option [selected]="true" [ngValue]="state" disabled>Select State</option>
+                <option *ngFor="let state of states;" >{{state}}</option>
+            </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" [(ngModel)]="user.zip" name="zip" placeholder="000000" required>
+            </div>
+
+            <div class="form-group col-md-4">
+                <label for="inputCountry">Country</label>
+                <select id="inputCountry" [(ngModel)]="user.country" name="country" class="form-control" required>
+                <option [selected]="true" [ngValue]="country" disabled>Select Country</option>
+                <option  *ngFor="let country of countries;">{{country}}</option>
+            </select>
+            </div>
+        </div>
+        <div class="form-group " id="but">
+            <span><strong>* All fields are required</strong></span>
+        </div>
+        <div class="text-center">
+            <button type="submit" (click)="form2.checkValidity() ? onSubmit() : null" class="btn btn-primary ">Submit</button>
+        </div>
+    </form>
+
+    <!--*ngIf="!myForm.myInput.$valid && todos.length > 0; else noTodos"-->
+    <!--*ngIf="!myForm.firstName.$valid && !myForm.lastName.$valid "-->
+    <!-- *ngIf="isLoggedIn; else loggedOut" -->
+    <!-- [ngValue]="state"
+[ngValue]="country" -->
+
+    <!-- ""form.valid ? onSubmit() : null"" -->

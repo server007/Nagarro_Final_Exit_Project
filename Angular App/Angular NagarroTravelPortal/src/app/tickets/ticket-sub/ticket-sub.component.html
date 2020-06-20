@@ -1,0 +1,38 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        <h1>Ticket List</h1>
+    </div>
+    <div class="panel-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Unique Ticket Id</th>
+                    <th>Request Type</th>
+                    <th>Travel City</th>
+                    <th>Travel Date</th>
+                    <th>Priority</th>
+                    <!-- <th>Gender</th> -->
+                    <th>Ticket Submission Date</th>
+                    <th>Ticket Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let ticket of tickets |paginate: { itemsPerPage: 4, currentPage: p }" (click)="openNewTab(ticket.tId)">
+
+                    <td><b>{{ ticket.tId}}</b></td>
+                    <td><b>{{ ticket.reqType}}</b></td>
+                    <td><b>{{ ticket.travelCity}}</b></td>
+                    <td><b>{{ ticket.travelDate}}</b></td>
+                    <td><b>{{ ticket.priority }}</b></td>
+                    <td><b>{{ ticket.subDate}}</b></td>
+                    <td><b>{{ ticket.status}}</b></td>
+
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <div class="paging">
+        <b><pagination-controls (pageChange)="p = $event"></pagination-controls></b>
+    </div>
+</div>
